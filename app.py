@@ -3,6 +3,13 @@ import streamlit as st
 from rag.rag_chain import get_response
 
 
+# Vectorstore creation
+from pathlib import Path
+
+if not Path("vectorstore").exists():
+    from rag.ingest import main
+    main()
+
 # Page Config
 
 st.set_page_config(
