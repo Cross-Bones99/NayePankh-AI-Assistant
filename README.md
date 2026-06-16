@@ -1,0 +1,1 @@
+An AI-powered knowledge assistant built for NayePankh Foundation. Uses Retrieval-Augmented Generation (RAG), ChromaDB, and Streamlit to provide information on volunteer management, food relief programs, menstrual hygiene awareness, education support, government schemes, and social impact initiatives
