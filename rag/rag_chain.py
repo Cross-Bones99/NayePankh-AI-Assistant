@@ -3,10 +3,13 @@ from langchain_core.prompts import ChatPromptTemplate
 import os
 from rag.retriever import retriever
 
-from dotenv import load_dotenv
-load_dotenv()
 
-os.environ["GROQ_API_KEY"]=os.getenv("GROQ_API_KEY")
+import streamlit as st
+
+GROQ_API_KEY = os.getenv(
+    "GROQ_API_KEY",
+    st.secrets.get("GROQ_API_KEY")
+)
 
 llm = ChatGroq(
     model="llama-3.3-70b-versatile"
